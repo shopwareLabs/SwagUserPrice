@@ -69,6 +69,13 @@ class Price extends LazyFetchModelEntity
     private $price;
 
     /**
+     * @var float $pseudoPrice
+     *
+     * @ORM\Column(type="float", nullable=false)
+     */
+    private $pseudoPrice;
+
+    /**
      * @var Group $priceGroup
      *
      * @ORM\ManyToOne(targetEntity="\Shopware\CustomModels\UserPrice\Group")
@@ -156,6 +163,25 @@ class Price extends LazyFetchModelEntity
     public function setPrice($price)
     {
         $this->price = $price;
+
+        return $this;
+    }
+
+    /**
+     * @return float
+     */
+    public function getPseudoPrice()
+    {
+        return $this->pseudoPrice;
+    }
+
+    /**
+     * @param float $pseudoPrice
+     * @return $this
+     */
+    public function setPseudoPrice($pseudoPrice)
+    {
+        $this->pseudoPrice = $pseudoPrice;
 
         return $this;
     }

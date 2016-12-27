@@ -368,6 +368,7 @@ class Repository extends ModelRepository
                 'prices.from',
                 'prices.to',
                 'prices.price',
+                'prices.pseudoPrice',
                 'prices.articleId',
                 'prices.articleDetailsId'
             ]
